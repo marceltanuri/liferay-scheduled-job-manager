@@ -156,6 +156,7 @@ public class QuartzSchedulerUtil {
     }
     
     private static boolean checkRunSupported() {
+    	/*
         try {
             QuartzSchedulerUtil.class.getClassLoader().loadClass("com.liferay.portal.kernel.scheduler.messaging.ReceiverKey");
             return true;
@@ -165,6 +166,11 @@ public class QuartzSchedulerUtil {
             }
             return false;
         }
+        */
+    	// PWS-359 NOTE : Liferay Portal 6.2 class "com.liferay.portal.kernel.scheduler.messaging.ReceiverKey"
+    	//                definition and usage was removed from Liferay 7.x code base.
+    	_log.debug("Scheduled Job execution is supported in Liferay 7.x.");
+    	return true;
     }
     
     public static final String ATTRIBUTE_JOBS_LIST = "schedulerJobsList";
@@ -183,8 +189,6 @@ public class QuartzSchedulerUtil {
     private static final String COLUMN_PREVIOUS_FIRE_TIME = "previousFireTime";
     private static final String COLUMN_NEXT_FIRE_TIME = "nextFireTime";
     private static final String COLUMN_STORAGE_TYPE = "storageType";
-    
-    public static final boolean RUN_SUPPORTED = checkRunSupported();
     
     public static final String ACTION_RUN = "run";
     public static final String ACTION_PAUSE = "pause";
