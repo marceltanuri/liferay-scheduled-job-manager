@@ -29,7 +29,6 @@
 <c:set var="jobnameparam" value ="<%=QuartzSchedulerUtil.PARAMETER_JOB_NAME %>"/>
 <c:set var="jobgroupparam" value ="<%=QuartzSchedulerUtil.PARAMETER_JOB_GROUP %>"/>
 <c:set var="jobstoragetypeparam" value ="<%=QuartzSchedulerUtil.PARAMETER_STORAGE_TYPE %>"/>
-<c:set var="runSupported" value="<%=QuartzSchedulerUtil.RUN_SUPPORTED %>"/>
 
 <div id=schedulerJobsContainer class="custom-scheduled">
 

@@ -24,7 +24,7 @@ buildScan {
 }
 
 group = 'com.rivetlogic'
-version = '1.4.0'
+version = '1.4.1'
 description = "liferay-scheduled-job-manager"
 
 sourceCompatibility = 1.8
