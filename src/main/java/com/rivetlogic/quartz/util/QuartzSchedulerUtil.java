@@ -155,24 +155,6 @@ public class QuartzSchedulerUtil {
         return orderByComparator;
     }
     
-    private static boolean checkRunSupported() {
-    	/*
-        try {
-            QuartzSchedulerUtil.class.getClassLoader().loadClass("com.liferay.portal.kernel.scheduler.messaging.ReceiverKey");
-            return true;
-        } catch(ClassNotFoundException e) {
-            if(_log.isDebugEnabled()) {
-                _log.debug("Scheduled Job execution not supported.");
-            }
-            return false;
-        }
-        */
-    	// PWS-359 NOTE : Liferay Portal 6.2 class "com.liferay.portal.kernel.scheduler.messaging.ReceiverKey"
-    	//                definition and usage was removed from Liferay 7.x code base.
-    	_log.debug("Scheduled Job execution is supported in Liferay 7.x.");
-    	return true;
-    }
-    
     public static final String ATTRIBUTE_JOBS_LIST = "schedulerJobsList";
     public static final String ATTRIBUTE_COUNT = "count";
     
